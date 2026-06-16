@@ -12,11 +12,15 @@ body {
   align-items: center;
   background: #000;
   font-family: "Helvetica Neue", sans-serif;
+  padding: 20px;
 }
 
 /* Input */
 .inp {
-  height: 30px;
+  width: 100%;
+  max-width: 320px;
+  height: 40px;
+  padding: 0 14px;
   font-size: 20px;
 }
 
@@ -48,20 +52,10 @@ body {
   filter: blur(10px);
   z-index: 1;
 
-  -webkit-mask-image: linear-gradient(
-    to top,
-    #000,
-    transparent
-  );
-
-  mask-image: linear-gradient(
-    to top,
-    #000,
-    transparent
-  );
+  -webkit-mask-image: linear-gradient(to top, #000, transparent);
+  mask-image: linear-gradient(to top, #000, transparent);
 }
 
-/* Content */
 .content {
   position: absolute;
   left: 20px;
@@ -93,15 +87,9 @@ body {
 
 /* Mobile */
 @media (max-width: 768px) {
-  body {
-    padding: 20px;
-  }
-
   .inp {
-    width: min(90vw, 320px);
-    height: 44px;
-    padding: 0 14px;
     font-size: 16px;
+    height: 44px;
   }
 
   .card {
